@@ -23,4 +23,6 @@ foreign key (doctor_id) references doctors(id));
 insert into doctors(name,specialization) value ('DR. Kunal Patil ','M.B.B.S, M.D.'),
 ('DR.Prakash Patil ','Radiologist');
 
+insert into doctors(name,specialization) value ('DR. Bhavesh Patil ','Physician');
+
 select * from doctors;
