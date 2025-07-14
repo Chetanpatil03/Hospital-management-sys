@@ -23,7 +23,7 @@ public class Patient {
         String gender = sc.next();
 
         try {
-            String sql = "insert into patient(name,age,gender) values (?,?,?)";
+            String sql = "insert into patients(name,age,gender) values (?,?,?)";
 
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1,name);
@@ -45,7 +45,7 @@ public class Patient {
     }
 
     public void viewPatient(){
-        String sql = "select * from patient";
+        String sql = "select * from patients";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
@@ -71,5 +71,29 @@ public class Patient {
         catch (SQLException e){
             e.printStackTrace();
         }
+    }
+
+    public boolean getPatientByID(int id){
+        String sql = "SELECT * FROM patients WHERE id = ?";
+        try{
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1,id);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()){
+                return true;
+            }
+            else {
+                return false;
+            }
+
+
+        }
+        catch (SQLException e){
+            e.printStackTrace();
+        }
+
+        return false;
     }
 }
