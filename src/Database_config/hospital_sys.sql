@@ -1,0 +1,26 @@
+create database hospital_sys;
+use hospital_sys;
+
+create table patients(
+id int auto_increment primary key,
+name varchar(255) not null,
+age int not null,
+gender varchar(10));
+
+create table doctors(
+id int auto_increment primary key,
+name varchar(255) not null,
+specialization varchar(255) not null);
+
+create table appointments(
+id int auto_increment primary key,
+patient_id int not null,
+doctor_id int not null,
+appointment_date date not null,
+foreign key (patient_id) references patients(id),
+foreign key (doctor_id) references doctors(id));
+
+insert into doctors(name,specialization) value ('DR. Kunal Patil ','M.B.B.S, M.D.'),
+('DR.Prakash Patil ','Radiologist');
+
+select * from doctors;
