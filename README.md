@@ -46,18 +46,20 @@ A basic Hospital Management System built using Java and JDBC for practice purpos
 
 1. Open MySQL Workbench (or any SQL client).
 2. Execute the SQL file provided:
-    <pre>
+   
+<pre>
    src/Database_config/hospital_sys.sql
- </pre>
+</pre>
  
 3. This will create the necessary tables and insert some initial data.
 4. Make sure your MySQL JDBC URL, username, and password in the code are correctly set.
 
 ## ▶️ How to Run
 1. Clone this repository:
+   
 <pre>
   git clone https://github.com/Chetanpatil03/Hospital-management-sys.git
-cd Hospital-management-sys
+  cd Hospital-management-sys
 </pre>
 
 2. Open the project in IntelliJ IDEA (or any Java IDE).
@@ -68,7 +70,5 @@ cd Hospital-management-sys
 
 <img width="1920" height="1080" alt="schema_hospital_sys" src="https://github.com/user-attachments/assets/033a5a81-ec5c-4c86-bb41-f2f9d761d3ad" />
 
+--
 
-## 🙋‍♂️ Author <br>
-Chetan Patil <br>
-Mini project for personal learning (Java + MySQL)
