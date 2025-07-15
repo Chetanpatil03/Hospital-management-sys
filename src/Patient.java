@@ -62,7 +62,7 @@ public class Patient {
                 int age = resultSet.getInt("age");
                 String gender = resultSet.getString("gender");
 
-                System.out.printf("|%-11d|%-19s|%-12d|%-13s|\n",id,name,age,gender);
+                System.out.printf("| %-8s | %-16s | %-9s | %-10s |\n",id,name,age,gender);
 
             }
             System.out.println("+----------+------------------+-----------+------------+");

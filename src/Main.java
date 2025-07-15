@@ -38,20 +38,26 @@ public class Main {
                 switch (ch){
                     case 1 :
                         patient.addPatient();
+                        System.out.println();
                         break;
                     case 2 :
                         //view patient
                         patient.viewPatient();
+                        System.out.println();
                         break;
                     case 3 :
                         //view Doctors
                         doctor.viewDoctors();
+                        System.out.println();
                         break;
                     case 4 :
                         //book appointment
+                        bookAppointment(conn,sc,patient,doctor);
+                        System.out.println();
                         break;
                     case 5 :
                         //exit
+                        System.out.println("Thank you for using Hospital Management System");
                         return;
                     default:
                         System.out.println("Enter valid choice : ");
