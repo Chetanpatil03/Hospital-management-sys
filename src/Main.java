@@ -2,7 +2,6 @@ import javax.print.Doc;
 import java.sql.*;
 import java.util.Scanner;
 import java.util.SortedMap;
-
 public class Main {
 
     public static final String url = "jdbc:mysql://localhost:3306/hospital_sys";
